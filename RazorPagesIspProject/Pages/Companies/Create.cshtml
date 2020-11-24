@@ -1,0 +1,68 @@
+﻿@page
+@model RazorPagesIspProject.Pages.Companies.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Company.Number" class="control-label"></label>
+                <input asp-for="Company.Number" class="form-control" />
+                <span asp-validation-for="Company.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.CompanyType" class="control-label"></label>
+                <select asp-for="Company.CompanyType" class="form-control"></select>
+                <span asp-validation-for="Company.CompanyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.MainBusiness" class="control-label"></label>
+                <input asp-for="Company.MainBusiness" class="form-control" />
+                <span asp-validation-for="Company.MainBusiness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.Name" class="control-label"></label>
+                <input asp-for="Company.Name" class="form-control" />
+                <span asp-validation-for="Company.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.PhysicalAddress" class="control-label"></label>
+                <input asp-for="Company.PhysicalAddress" class="form-control" />
+                <span asp-validation-for="Company.PhysicalAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.EmailAddress" class="control-label"></label>
+                <input asp-for="Company.EmailAddress" class="form-control" />
+                <span asp-validation-for="Company.EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.DateOfIncorporation" class="control-label"></label>
+                <input asp-for="Company.DateOfIncorporation" class="form-control" />
+                <span asp-validation-for="Company.DateOfIncorporation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company.ApplicantID" class="control-label"></label>
+                <select asp-for="Company.ApplicantID" class ="form-control" asp-items="ViewBag.ApplicantID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
