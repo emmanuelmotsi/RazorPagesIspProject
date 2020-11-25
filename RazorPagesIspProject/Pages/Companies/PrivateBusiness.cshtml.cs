@@ -103,7 +103,7 @@ namespace RazorPagesIspProject.Pages.Companies
 
             // can i call this method once and it will take care of the foreign keys?????
             await _context.SaveChangesAsync();
-            return RedirectToPage("/Applications");
+            return RedirectToPage("./Applications");
         }
     }
 }

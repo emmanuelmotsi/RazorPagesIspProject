@@ -4,12 +4,7 @@
 * Copyright 2013-2020 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
 */
-/*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -68,10 +63,6 @@ body {
     text-align: left;
     background-color: #fff;
 }
-
-/*[tabindex="-1"]:focus:not(:focus-visible) {
-    outline: 0 !important;
-}*/
 
 hr {
     box-sizing: content-box;
@@ -2061,11 +2052,6 @@ pre {
     opacity: 1;
 }
 
-.form-control::placeholder {
-    color: #6c757d;
-    opacity: 1;
-}
-
 .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef;
     opacity: 1;
@@ -2077,7 +2063,6 @@ input[type=datetime-local].form-control,
 input[type=month].form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
 }
 
 select.form-control:focus::-ms-value {

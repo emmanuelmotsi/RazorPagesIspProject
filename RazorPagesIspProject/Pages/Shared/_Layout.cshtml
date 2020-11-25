@@ -35,45 +35,11 @@
         </div>
     </nav>
 
-    @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Empirical Business Services</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-success btn-large" asp-area="" asp-page="/Companies/Index">Register!</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>*@
-
-
-    @*<div class="container">*@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
-    @*</div>*@
 
-    @*<footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Empirical Business Services - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>*@
-
+    <!--Footer-->
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
@@ -102,7 +68,7 @@
     <!-- Contact form JS-->
     <script src="assets/mail/jqBootstrapValidation.js"></script>
     <script src="assets/mail/contact_me.js"></script>
-    <!-- Core theme JS-->
+    <!-- Core JS-->
     <script src="js/scripts.js"></script>
 
     @RenderSection("Scripts", required: false)

@@ -120,7 +120,7 @@ namespace RazorPagesIspProject.Pages.Companies
             _context.CompanyMembers.AddRange(companySubscribers_Fks);
 
             await _context.SaveChangesAsync();
-            return RedirectToPage("/Applications");
+            return RedirectToPage("./Applications");
         }
     }
 }
