@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RazorPagesIspProject.Pages
+namespace RazorPagesIspProject.Pages.Companies
 {
-    public class ContactModel : PageModel
+    public class ApplicationsModel : PageModel
     {
         public void OnGet()
         {

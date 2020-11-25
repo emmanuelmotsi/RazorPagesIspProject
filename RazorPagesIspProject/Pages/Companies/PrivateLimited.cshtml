@@ -5,256 +5,257 @@
     ViewData["Title"] = "Private Limited";
 }
 
-
-<h1>Registration requirements for Private Limited.</h1>
-<hr />
-
-<form method="post">
-    <div class="row">
-        <div class="form-group col-md-8">
-            <label asp-for="Company.EmailAddress" class="control-label">Company Email Address</label>
-            <input asp-for="Company.EmailAddress" class="form-control" />
-            <span asp-validation-for="Company.EmailAddress" class="text-danger"></span>
-        </div>
-    </div>
-
-    <h2>Company Address</h2>
+<div class="container">
+    <h1>Registration requirements for Private Limited.</h1>
     <hr />
-    <div class="row">
-        <div class="form-group col-md-12">
-            <label asp-for="Company.PhysicalAddress" class="control-label">Street Address</label>
-            <input asp-for="Company.PhysicalAddress" class="form-control" />
-            <span asp-validation-for="Company.PhysicalAddress" class="text-danger"></span>
-        </div>
-    </div>
 
-    <h2>Business Objective and Name Preferences</h2>
-    <hr />
-    <div class="form-row">
-        <div class="form-group col-md-12">
-            <label asp-for="Company.MainBusiness" class="control-label">Business Objective</label>
-            <textarea asp-for="Company.MainBusiness" class="form-control" rows="3"></textarea>
-            <span asp-validation-for="Company.MainBusiness" class="text-danger"></span>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label asp-for="NameOptions[0].Name" class="control-label">Name 1</label>
-            <input asp-for="NameOptions[0].Name" class="form-control" />
-            <span asp-validation-for="NameOptions[0].Name" class="text-danger"></span>
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="NameOptions[1].Name" class="control-label">Name 2</label>
-            <input asp-for="NameOptions[1].Name" class="form-control" />
-            <span asp-validation-for="NameOptions[1].Name" class="text-danger"></span>
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="NameOptions[2].Name" class="control-label">Name 3</label>
-            <input asp-for="NameOptions[2].Name" class="form-control" />
-            <span asp-validation-for="NameOptions[2].Name" class="text-danger"></span>
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="NameOptions[3].Name" class="control-label">Name 4</label>
-            <input asp-for="NameOptions[3].Name" class="form-control" />
-            <span asp-validation-for="NameOptions[3].Name" class="text-danger"></span>
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="NameOptions[4].Name" class="control-label">Name 5</label>
-            <input asp-for="NameOptions[4].Name" class="form-control" />
-            <span asp-validation-for="NameOptions[4].Name" class="text-danger"></span>
-        </div>
-    </div>
-
-
-    <h2>Company Directors</h2>
-    <hr />
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-12"><h3>Director 1</h3></div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[0].Forename" class="control-label">Forename(s)</label>
-                    <input asp-for="DirectorVm[0].Forename" class="form-control" />
-                    <span asp-validation-for="DirectorVm[0].Forename" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[0].Surname" class="control-label">Surname</label>
-                    <input asp-for="DirectorVm[0].Surname" class="form-control" />
-                    <span asp-validation-for="DirectorVm[0].Surname" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[0].Nationality[0]" class="control-label">Nationality</label>
-                    <input asp-for="DirectorVm[0].Nationality" class="form-control" />
-                    <span asp-validation-for="DirectorVm[0].Nationality" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[0].IdentityNumber" class="control-label">Identification Number/Passport</label>
-                    <input asp-for="DirectorVm[0].IdentityNumber" class="form-control" />
-                    <span asp-validation-for="DirectorVm[0].IdentityNumber" class="text-danger"></span>
-                </div>
-                <div class="form-group col-12">
-                    <label asp-for="DirectorVm[0].PhysicalAddress" class="control-label">Address</label>
-                    <input asp-for="DirectorVm[0].PhysicalAddress" class="form-control" />
-                    <span asp-validation-for="DirectorVm[0].PhysicalAddress" class="text-danger"></span>
-                </div>
+    <form method="post">
+        <div class="row">
+            <div class="form-group col-md-8">
+                <label asp-for="Company.EmailAddress" class="control-label">Company Email Address</label>
+                <input asp-for="Company.EmailAddress" class="form-control" />
+                <span asp-validation-for="Company.EmailAddress" class="text-danger"></span>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-12"><h3>Director 2</h3></div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[1].Forename" class="control-label">Forename(s)</label>
-                    <input asp-for="DirectorVm[1].Forename" class="form-control" />
-                    <span asp-validation-for="DirectorVm[1].Forename" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[1].Surname" class="control-label">Surname</label>
-                    <input asp-for="DirectorVm[1].Surname" class="form-control" />
-                    <span asp-validation-for="DirectorVm[1].Surname" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[1].Nationality[0]" class="control-label">Nationality</label>
-                    <input asp-for="DirectorVm[1].Nationality" class="form-control" />
-                    <span asp-validation-for="DirectorVm[1].Nationality" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-6">
-                    <label asp-for="DirectorVm[1].IdentityNumber" class="control-label">Identification Number/Passport</label>
-                    <input asp-for="DirectorVm[1].IdentityNumber" class="form-control" />
-                    <span asp-validation-for="DirectorVm[1].IdentityNumber" class="text-danger"></span>
-                </div>
-                <div class="form-group col-12">
-                    <label asp-for="DirectorVm[1].PhysicalAddress" class="control-label">Address</label>
-                    <input asp-for="DirectorVm[1].PhysicalAddress" class="form-control" />
-                    <span asp-validation-for="DirectorVm[1].PhysicalAddress" class="text-danger"></span>
-                </div>
-            </div>
-        </div>
-
-        <h2>Company Secretary</h2>
+        <h2>Company Address</h2>
         <hr />
         <div class="row">
-            <div class="form-group col-md-6">
-                <label asp-for="SecretaryVm.Forename" class="control-label">Forename(s)</label>
-                <input asp-for="SecretaryVm.Forename" class="form-control" />
-                <span asp-validation-for="SecretaryVm.Forename" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6">
-                <label asp-for="SecretaryVm.Surname" class="control-label">Surname</label>
-                <input asp-for="SecretaryVm.Surname" class="form-control" />
-                <span asp-validation-for="SecretaryVm.Surname" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6">
-                <label asp-for="SecretaryVm.Nationality" class="control-label">Nationality</label>
-                <input asp-for="SecretaryVm.Nationality" class="form-control" />
-                <span asp-validation-for="SecretaryVm.Nationality" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6">
-                <label asp-for="SecretaryVm.IdentityNumber" class="control-label">Identification Number/Passport</label>
-                <input asp-for="SecretaryVm.IdentityNumber" class="form-control" />
-                <span asp-validation-for="SecretaryVm.IdentityNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group col-12">
-                <label asp-for="SecretaryVm.PhysicalAddress" class="control-label">Address</label>
-                <input asp-for="SecretaryVm.PhysicalAddress" class="form-control" />
-                <span asp-validation-for="SecretaryVm.PhysicalAddress" class="text-danger"></span>
+            <div class="form-group col-md-12">
+                <label asp-for="Company.PhysicalAddress" class="control-label">Street Address</label>
+                <input asp-for="Company.PhysicalAddress" class="form-control" />
+                <span asp-validation-for="Company.PhysicalAddress" class="text-danger"></span>
             </div>
         </div>
 
-        <h2>Company Subcribers</h2>
+        <h2>Business Objective and Name Preferences</h2>
+        <hr />
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label asp-for="Company.MainBusiness" class="control-label">Business Objective</label>
+                <textarea asp-for="Company.MainBusiness" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Company.MainBusiness" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="NameOptions[0].Name" class="control-label">Name 1</label>
+                <input asp-for="NameOptions[0].Name" class="form-control" />
+                <span asp-validation-for="NameOptions[0].Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="NameOptions[1].Name" class="control-label">Name 2</label>
+                <input asp-for="NameOptions[1].Name" class="form-control" />
+                <span asp-validation-for="NameOptions[1].Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="NameOptions[2].Name" class="control-label">Name 3</label>
+                <input asp-for="NameOptions[2].Name" class="form-control" />
+                <span asp-validation-for="NameOptions[2].Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="NameOptions[3].Name" class="control-label">Name 4</label>
+                <input asp-for="NameOptions[3].Name" class="form-control" />
+                <span asp-validation-for="NameOptions[3].Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="NameOptions[4].Name" class="control-label">Name 5</label>
+                <input asp-for="NameOptions[4].Name" class="form-control" />
+                <span asp-validation-for="NameOptions[4].Name" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <h2>Company Directors</h2>
         <hr />
         <div class="row">
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-12"><h3>Subscriber 1</h3></div>
+                    <div class="col-12"><h3>Director 1</h3></div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[0].Forename" class="control-label">Forename(s)</label>
-                        <input asp-for="SubcriberVm[0].Forename" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[0].Forename" class="text-danger"></span>
+                        <label asp-for="DirectorVm[0].Forename" class="control-label">Forename(s)</label>
+                        <input asp-for="DirectorVm[0].Forename" class="form-control" />
+                        <span asp-validation-for="DirectorVm[0].Forename" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[0].Surname" class="control-label">Surname</label>
-                        <input asp-for="SubcriberVm[0].Surname" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[0].Surname" class="text-danger"></span>
+                        <label asp-for="DirectorVm[0].Surname" class="control-label">Surname</label>
+                        <input asp-for="DirectorVm[0].Surname" class="form-control" />
+                        <span asp-validation-for="DirectorVm[0].Surname" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[0].Occupation" class="control-label">Occupation</label>
-                        <input asp-for="SubcriberVm[0].Occupation" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[0].Occupation" class="text-danger"></span>
+                        <label asp-for="DirectorVm[0].Nationality[0]" class="control-label">Nationality</label>
+                        <input asp-for="DirectorVm[0].Nationality" class="form-control" />
+                        <span asp-validation-for="DirectorVm[0].Nationality" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[0].SharesTaken" class="control-label">Shares Taken</label>
-                        <input asp-for="SubcriberVm[0].SharesTaken" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[0].SharesTaken" class="text-danger"></span>
+                        <label asp-for="DirectorVm[0].IdentityNumber" class="control-label">Identification Number/Passport</label>
+                        <input asp-for="DirectorVm[0].IdentityNumber" class="form-control" />
+                        <span asp-validation-for="DirectorVm[0].IdentityNumber" class="text-danger"></span>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label asp-for="SubcriberVm[0].PhysicalAddress" class="control-label">Address</label>
-                        <input asp-for="SubcriberVm[0].PhysicalAddress" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[0].PhysicalAddress" class="text-danger"></span>
+                    <div class="form-group col-12">
+                        <label asp-for="DirectorVm[0].PhysicalAddress" class="control-label">Address</label>
+                        <input asp-for="DirectorVm[0].PhysicalAddress" class="form-control" />
+                        <span asp-validation-for="DirectorVm[0].PhysicalAddress" class="text-danger"></span>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-12"><h3>Subscriber 2</h3></div>
+                    <div class="col-12"><h3>Director 2</h3></div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[1].Forename" class="control-label">Forename(s)</label>
-                        <input asp-for="SubcriberVm[1].Forename" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[0].Forename" class="text-danger"></span>
+                        <label asp-for="DirectorVm[1].Forename" class="control-label">Forename(s)</label>
+                        <input asp-for="DirectorVm[1].Forename" class="form-control" />
+                        <span asp-validation-for="DirectorVm[1].Forename" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[1].Surname" class="control-label">Surname</label>
-                        <input asp-for="SubcriberVm[1].Surname" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[1].Surname" class="text-danger"></span>
+                        <label asp-for="DirectorVm[1].Surname" class="control-label">Surname</label>
+                        <input asp-for="DirectorVm[1].Surname" class="form-control" />
+                        <span asp-validation-for="DirectorVm[1].Surname" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[1].Occupation" class="control-label">Occupation</label>
-                        <input asp-for="SubcriberVm[1].Occupation" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[1].Occupation" class="text-danger"></span>
+                        <label asp-for="DirectorVm[1].Nationality[0]" class="control-label">Nationality</label>
+                        <input asp-for="DirectorVm[1].Nationality" class="form-control" />
+                        <span asp-validation-for="DirectorVm[1].Nationality" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label asp-for="SubcriberVm[1].SharesTaken" class="control-label">Shares Taken</label>
-                        <input asp-for="SubcriberVm[1].SharesTaken" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[1].SharesTaken" class="text-danger"></span>
+                        <label asp-for="DirectorVm[1].IdentityNumber" class="control-label">Identification Number/Passport</label>
+                        <input asp-for="DirectorVm[1].IdentityNumber" class="form-control" />
+                        <span asp-validation-for="DirectorVm[1].IdentityNumber" class="text-danger"></span>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label asp-for="SubcriberVm[1].PhysicalAddress" class="control-label">Address</label>
-                        <input asp-for="SubcriberVm[1].PhysicalAddress" class="form-control" />
-                        <span asp-validation-for="SubcriberVm[1].PhysicalAddress" class="text-danger"></span>
+                    <div class="form-group col-12">
+                        <label asp-for="DirectorVm[1].PhysicalAddress" class="control-label">Address</label>
+                        <input asp-for="DirectorVm[1].PhysicalAddress" class="form-control" />
+                        <span asp-validation-for="DirectorVm[1].PhysicalAddress" class="text-danger"></span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12"><h3>Applicant Details</h3></div>
-            <div class="form-group col-md-6">
-                <label asp-for="ApplicantVm.FirstName" class="control-label">Forename(s)</label>
-                <input asp-for="ApplicantVm.FirstName" class="form-control" />
-                <span asp-validation-for="ApplicantVm.FirstName" class="text-danger"></span>
+            <h2>Company Secretary</h2>
+            <hr />
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="SecretaryVm.Forename" class="control-label">Forename(s)</label>
+                    <input asp-for="SecretaryVm.Forename" class="form-control" />
+                    <span asp-validation-for="SecretaryVm.Forename" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="SecretaryVm.Surname" class="control-label">Surname</label>
+                    <input asp-for="SecretaryVm.Surname" class="form-control" />
+                    <span asp-validation-for="SecretaryVm.Surname" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="SecretaryVm.Nationality" class="control-label">Nationality</label>
+                    <input asp-for="SecretaryVm.Nationality" class="form-control" />
+                    <span asp-validation-for="SecretaryVm.Nationality" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="SecretaryVm.IdentityNumber" class="control-label">Identification Number/Passport</label>
+                    <input asp-for="SecretaryVm.IdentityNumber" class="form-control" />
+                    <span asp-validation-for="SecretaryVm.IdentityNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12">
+                    <label asp-for="SecretaryVm.PhysicalAddress" class="control-label">Address</label>
+                    <input asp-for="SecretaryVm.PhysicalAddress" class="form-control" />
+                    <span asp-validation-for="SecretaryVm.PhysicalAddress" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label asp-for="ApplicantVm.LastName" class="control-label">Surname</label>
-                <input asp-for="ApplicantVm.LastName" class="form-control" />
-                <span asp-validation-for="ApplicantVm.LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6">
-                <label asp-for="ApplicantVm.PhoneNumber" class="control-label">Phone Number</label>
-                <input asp-for="ApplicantVm.PhoneNumber" class="form-control" />
-                <span asp-validation-for="ApplicantVm.PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6">
-                <label asp-for="ApplicantVm.EmailAddress" class="control-label">Address</label>
-                <input asp-for="ApplicantVm.EmailAddress" class="form-control" />
-                <span asp-validation-for="ApplicantVm.EmailAddress" class="text-danger"></span>
+
+            <h2>Company Subcribers</h2>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12"><h3>Subscriber 1</h3></div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[0].Forename" class="control-label">Forename(s)</label>
+                            <input asp-for="SubcriberVm[0].Forename" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[0].Forename" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[0].Surname" class="control-label">Surname</label>
+                            <input asp-for="SubcriberVm[0].Surname" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[0].Surname" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[0].Occupation" class="control-label">Occupation</label>
+                            <input asp-for="SubcriberVm[0].Occupation" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[0].Occupation" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[0].SharesTaken" class="control-label">Shares Taken</label>
+                            <input asp-for="SubcriberVm[0].SharesTaken" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[0].SharesTaken" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label asp-for="SubcriberVm[0].PhysicalAddress" class="control-label">Address</label>
+                            <input asp-for="SubcriberVm[0].PhysicalAddress" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[0].PhysicalAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12"><h3>Subscriber 2</h3></div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[1].Forename" class="control-label">Forename(s)</label>
+                            <input asp-for="SubcriberVm[1].Forename" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[0].Forename" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[1].Surname" class="control-label">Surname</label>
+                            <input asp-for="SubcriberVm[1].Surname" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[1].Surname" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[1].Occupation" class="control-label">Occupation</label>
+                            <input asp-for="SubcriberVm[1].Occupation" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[1].Occupation" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="SubcriberVm[1].SharesTaken" class="control-label">Shares Taken</label>
+                            <input asp-for="SubcriberVm[1].SharesTaken" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[1].SharesTaken" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label asp-for="SubcriberVm[1].PhysicalAddress" class="control-label">Address</label>
+                            <input asp-for="SubcriberVm[1].PhysicalAddress" class="form-control" />
+                            <span asp-validation-for="SubcriberVm[1].PhysicalAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12"><h3>Applicant Details</h3></div>
+                <div class="form-group col-md-6">
+                    <label asp-for="ApplicantVm.FirstName" class="control-label">Forename(s)</label>
+                    <input asp-for="ApplicantVm.FirstName" class="form-control" />
+                    <span asp-validation-for="ApplicantVm.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="ApplicantVm.LastName" class="control-label">Surname</label>
+                    <input asp-for="ApplicantVm.LastName" class="form-control" />
+                    <span asp-validation-for="ApplicantVm.LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="ApplicantVm.PhoneNumber" class="control-label">Phone Number</label>
+                    <input asp-for="ApplicantVm.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="ApplicantVm.PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="ApplicantVm.EmailAddress" class="control-label">Address</label>
+                    <input asp-for="ApplicantVm.EmailAddress" class="form-control" />
+                    <span asp-validation-for="ApplicantVm.EmailAddress" class="text-danger"></span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <input type="submit" value="Submit" class="btn btn-primary" />
-    </div>
-</form>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

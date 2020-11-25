@@ -5,69 +5,28 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].Applicant)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].CompanyType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].MainBusiness)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].PhysicalAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].EmailAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].DateOfIncorporation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Company)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Applicant.EmailAddress)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CompanyType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MainBusiness)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhysicalAddress)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmailAddress)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateOfIncorporation)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<section>
+    <div class="container">
+        <div class="text-center my-1">
+            <h1>Select Type of Company</h1>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="card mx-3" style="width: 18rem;">
+                <img src="/assets/img/card-pics.jpeg" class="card-img-top" alt="Private Business Corporation">
+                <div class="card-body">
+                    <h5 class="card-title">Private Business Corporation</h5>
+                    <p class="card-text">Click below if you are interested in registering a private business company.</p>
+                    <a asp-page="./PrivateBusiness" class="btn btn-primary">Private Business</a>
+                </div>
+            </div>
+            <div class="card mx-3" style="width: 18rem;">
+                <img src="/assets/img/card-pics.jpeg" class="card-img-top" alt="Private Limited Company">
+                <div class="card-body">
+                    <h5 class="card-title">Private Limited Company</h5>
+                    <p class="card-text">Click below if you are interested in registering a private limited company.</p>
+                    <a asp-page="./PrivateLimited" class="btn btn-primary">Private Limited</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
